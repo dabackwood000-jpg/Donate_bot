@@ -108,7 +108,7 @@ async def process_successful_payment(message: types.Message):
 
 async def main():
     print("Бот запущен...")
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, skip_updates=False, handle_signals=False)
 
 if __name__ == "__main__":
     asyncio.run(main())
